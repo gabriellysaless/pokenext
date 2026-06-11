@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Card.module.css'
 
-export default function Card({pokemon}) {
+export default function Card({pokemon, index}) {
     return (
         <div className={styles.card}>
             <Image
@@ -10,6 +10,7 @@ export default function Card({pokemon}) {
                 width={120}
                 height={120}
                 alt={pokemon.name}
+                priority={index < 8}
             />
             <p className={styles.id}>#{pokemon.id}</p>
             <h3 className={styles.title}>{pokemon.name}</h3>

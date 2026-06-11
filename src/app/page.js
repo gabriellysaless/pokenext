@@ -34,8 +34,8 @@ export default async function Home() {
       </div>
 
       <div className={styles.pokemon_container}>
-        {pokemons.map((pokemon) => (
-          <Card key={pokemon.id} pokemon={pokemon}/>
+        {pokemons.map((pokemon, index) => (
+          <Card key={pokemon.id} pokemon={pokemon} index={index}/>
         ))}
       </div>
 
